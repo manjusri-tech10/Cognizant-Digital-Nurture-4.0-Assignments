@@ -7,7 +7,8 @@ public class Forecast {
     public double futureValueMemo(double current, double rate, int years, double[] memo) {
         if (years == 0) return current;
         if (memo[years] != 0) return memo[years];
-        memo[years] = futureValueMemo(current * (1 + rate), rate, years - 1, memo);
+        double updatedCurrent = current * (1 + rate);
+        memo[years] = futureValueMemo(updatedCurrent, rate, years - 1, memo);
         return memo[years];
     }
 }
