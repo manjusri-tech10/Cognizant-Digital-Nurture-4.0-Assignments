@@ -1,3 +1,3 @@
 public abstract class DocumentFactory {
-    public abstract Document createDocument();//a
+    public abstract Document createDocument();
 }
