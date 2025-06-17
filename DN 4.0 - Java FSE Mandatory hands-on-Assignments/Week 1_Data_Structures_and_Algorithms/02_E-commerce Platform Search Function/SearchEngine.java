@@ -1,20 +1,21 @@
-public class SearchEngine {
-    public int linearSearch(Product[] products, String name) {
-        for (int i = 0; i < products.length; i++) {
-            if (products[i].productName.equals(name)) return i;
-        }
-        return -1;
-    }
+package Ecommerce;
+import java.util.Arrays;
 
-    public int binarySearch(Product[] products, String name) {
-        int left = 0, right = products.length - 1;
-        while (left <= right) {
-            int mid = (left + right) / 2;
-            int cmp = products[mid].productName.compareTo(name);
-            if (cmp == 0) return mid;
-            else if (cmp < 0) left = mid + 1;
-            else right = mid - 1;
-        }
-        return -1;
+public class MainSearch {
+    public static void main(String[] args) {
+        Product[] products = {
+                new Product(1, "Phone", "Electronics"),
+                new Product(2, "Shirt", "Apparel"),
+                new Product(3, "Laptop", "Electronics")
+        };
+
+        Arrays.sort(products, (a, b) -> a.productName.compareTo(b.productName));
+        SearchEngine s = new SearchEngine();
+
+        int linearResult = s.linearSearch(products, "Laptop");
+        int binaryResult = s.binarySearch(products, "Laptop");
+
+        System.out.println("Linear Search: Found at index " + linearResult);
+        System.out.println("Binary Search: Found at index " + binaryResult);
     }
 }
