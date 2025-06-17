@@ -1,3 +1,3 @@
 public interface Document {
-    void open();
+    void open();//interface method without implementation
 }
