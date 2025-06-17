@@ -11,6 +11,6 @@ public class MainSearch {
         Arrays.sort(products, (a, b) -> a.productName.compareTo(b.productName));
         SearchEngine s = new SearchEngine();
         s.linearSearch(products, "Laptop");
-        s.binarySearch(products, "Laptop");
+        s.binarySearch(products, "Shirt");
     }
 }
