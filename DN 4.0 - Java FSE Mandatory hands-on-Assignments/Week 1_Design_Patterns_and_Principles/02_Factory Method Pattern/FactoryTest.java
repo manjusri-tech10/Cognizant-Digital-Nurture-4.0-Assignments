@@ -4,7 +4,7 @@ public class FactoryTest {
         Document wordDoc = wordFactory.createDocument();
         wordDoc.open();
 
-        DocumentFactory pdfFactory = new PdfDocumentFactory();//
+        DocumentFactory pdfFactory = new PdfDocumentFactory();
         Document pdfDoc = pdfFactory.createDocument();
         pdfDoc.open();
 
