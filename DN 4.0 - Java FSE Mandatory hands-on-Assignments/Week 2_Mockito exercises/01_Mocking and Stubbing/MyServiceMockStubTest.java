@@ -16,7 +16,7 @@ public class MyServiceMockStubTest {
         System.out.println("Calling fetchData() from MyService...");
         String result = service.fetchData();
 
-        System.out.println("Result received: " + result);
+        System.out.println("Result received: " + result);//
         assertEquals("Mock Data", result);
         System.out.println("Test passed: Mocked data matches expected value.");
     }
