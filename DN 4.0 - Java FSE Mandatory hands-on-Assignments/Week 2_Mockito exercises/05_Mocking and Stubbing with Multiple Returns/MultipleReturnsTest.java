@@ -11,10 +11,10 @@ public class MultipleReturnsTest {
 
         MyService service = new MyService(mockApi);
 
-        System.out.println("First call:");
+        System.out.println("First call");
         assertEquals("First", service.fetchData());
 
-        System.out.println("Second call:");
+        System.out.println("Second call");
         assertEquals("Second", service.fetchData());
     }
 }
