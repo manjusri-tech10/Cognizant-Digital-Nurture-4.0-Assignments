@@ -41,4 +41,14 @@ public class BookController {
     public void deleteBook(@PathVariable Long id) {
         bookRepository.deleteById(id);
     }
+    @GetMapping("/print")
+    public void printBooks() {
+        List<Book> books = bookRepository.findAll();
+        System.out.println("=== Book List ===");
+        for (Book book : books) {
+            System.out.println("ID: " + book.getId() +
+                               ", Title: " + book.getTitle() +
+                               ", Author: " + book.getAuthor());
+        }
+    }
 }
