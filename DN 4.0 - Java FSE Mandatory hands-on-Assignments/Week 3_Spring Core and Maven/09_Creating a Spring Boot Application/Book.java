@@ -19,7 +19,7 @@ public class Book {
         this.title = title;
         this.author = author;
     }
-
+//getters and setters
     public Long getId() {
         return id;
     }
