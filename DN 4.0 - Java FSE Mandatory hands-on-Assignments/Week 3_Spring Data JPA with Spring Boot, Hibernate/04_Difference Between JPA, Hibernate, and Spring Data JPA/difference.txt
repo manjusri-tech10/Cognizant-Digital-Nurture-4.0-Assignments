@@ -1,0 +1,41 @@
+Java Persistence API (JPA):
+JPA is a specification (JSR 338) that defines a standard for ORM in Java.
+
+It provides a standard API for:
+
+Mapping Java objects to database tables.
+
+Managing lifecycle and relationships.
+
+It contains only interfaces and annotations; no implementation.
+
+Needs an implementation like Hibernate, EclipseLink, etc.
+
+Hibernate:
+Hibernate is an ORM (Object Relational Mapping) tool.
+
+It is the most popular implementation of JPA.
+
+It offers additional features over the JPA spec like:
+
+HQL (Hibernate Query Language)
+
+First and second-level caching
+
+Requires manual configuration of sessions, transactions, etc.
+
+Spring Data JPA:
+It is not a JPA implementation.
+
+It is an abstraction layer over JPA implementations like Hibernate.
+
+Reduces boilerplate code and provides:
+
+Ready-made JpaRepository interface.
+
+Auto-generated queries based on method names.
+
+Automatic transaction management.
+
+Highly integrated with Spring Boot.
+
