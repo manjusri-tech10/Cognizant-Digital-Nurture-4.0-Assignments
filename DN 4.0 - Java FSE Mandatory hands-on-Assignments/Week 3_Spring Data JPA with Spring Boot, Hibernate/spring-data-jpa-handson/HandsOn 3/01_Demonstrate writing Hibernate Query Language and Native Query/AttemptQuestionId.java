@@ -24,5 +24,4 @@ public class AttemptQuestionId implements Serializable {
     @Override public int hashCode() {
         return Objects.hash(attemptId, questionId);
     }
-    // getters/setters...
 }
