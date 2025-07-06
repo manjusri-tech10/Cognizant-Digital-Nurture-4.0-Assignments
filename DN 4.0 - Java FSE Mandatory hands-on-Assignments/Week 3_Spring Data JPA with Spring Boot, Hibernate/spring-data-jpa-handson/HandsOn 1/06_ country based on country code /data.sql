@@ -1,0 +1,10 @@
+INSERT INTO country (code, name) VALUES ('IN', 'India');
+INSERT INTO country (code, name) VALUES ('US', 'United States');
+INSERT INTO country (code, name) VALUES ('CN', 'China');
+INSERT INTO country (code, name) VALUES ('JP', 'Japan');
+INSERT INTO country (code, name) VALUES ('DE', 'Germany');
+INSERT INTO country (code, name) VALUES ('FR', 'France');
+INSERT INTO country (code, name) VALUES ('IT', 'Italy');
+INSERT INTO country (code, name) VALUES ('BR', 'Brazil');
+INSERT INTO country (code, name) VALUES ('RU', 'Russia');
+INSERT INTO country (code, name) VALUES ('AU', 'Australia');
