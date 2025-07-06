@@ -11,7 +11,13 @@ public class SpringLearnApplication {
 	private static final Logger LOGGER = LoggerFactory.getLogger(SpringLearnApplication.class);
 
 	public static void main(String[] args) {
+		System.out.println("=========== Starting SpringLearnApplication ===========");
 		SpringApplication.run(SpringLearnApplication.class, args);
-		LOGGER.info("Inside main()");
+
+		LOGGER.info("Inside main() - Application started successfully");
+
+		System.out.println(">>> Application is running on http://localhost:8080");
+		System.out.println(">>> You can start adding your controllers and services now.");
+		System.out.println("=========== SpringLearnApplication Booted ===========");
 	}
 }
