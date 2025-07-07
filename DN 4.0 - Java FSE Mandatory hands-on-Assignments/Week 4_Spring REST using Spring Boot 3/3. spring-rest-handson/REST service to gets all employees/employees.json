@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "salary": 50000.0,
+    "permanent": true,
+    "department": {
+      "id": 1,
+      "name": "IT"
+    },
+    "skillList": [
+      { "id": 1, "name": "Java" },
+      { "id": 2, "name": "Angular" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "salary": 45000.0,
+    "permanent": false,
+    "department": {
+      "id": 2,
+      "name": "HR"
+    },
+    "skillList": [
+      { "id": 2, "name": "Angular" }
+    ]
+  }
+]
