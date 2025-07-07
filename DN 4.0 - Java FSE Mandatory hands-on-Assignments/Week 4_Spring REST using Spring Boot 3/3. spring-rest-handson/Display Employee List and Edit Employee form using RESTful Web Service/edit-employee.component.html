@@ -1,0 +1,8 @@
+<h2>Edit Employee</h2>
+<div *ngIf="employee">
+  <label>ID: {{employee.id}}</label><br/>
+  <label>Name: </label><input [(ngModel)]="employee.name"><br/>
+  <label>Department: </label><input [(ngModel)]="employee.department"><br/>
+  <label>Salary: </label><input [(ngModel)]="employee.salary"><br/>
+  <button>Save</button>
+</div>
