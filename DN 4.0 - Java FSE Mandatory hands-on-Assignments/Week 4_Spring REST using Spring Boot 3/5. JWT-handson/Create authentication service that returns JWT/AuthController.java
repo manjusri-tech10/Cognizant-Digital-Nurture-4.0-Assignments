@@ -16,7 +16,10 @@ public class AuthController {
 
     @GetMapping("/authenticate")
     public ResponseEntity<?> authenticate(@RequestHeader("Authorization") String authHeader) {
+        System.out.println(" Received /authenticate request");
+
         if (authHeader == null || !authHeader.startsWith("Basic ")) {
+            System.out.println(" Missing or invalid Authorization header");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Missing Authorization Header");
         }
 
@@ -28,10 +31,16 @@ public class AuthController {
         String username = values[0];
         String password = values[1];
 
+        System.out.println("➡️ Username: " + username);
+        System.out.println("➡️ Password: " + password);
+
         if ("user".equals(username) && "pwd".equals(password)) {
             String token = jwtUtil.generateToken(username);
+            System.out.println("Authenticated. JWT Token generated:");
+            System.out.println(token);
             return ResponseEntity.ok(Collections.singletonMap("token", token));
         } else {
+            System.out.println("Invalid credentials");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid Credentials");
         }
     }
