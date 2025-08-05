@@ -1,0 +1,20 @@
+Step 1: Setup your working Git directory
+mkdir gitignore-demo
+cd gitignore-demo
+git init
+Step 2: Create sample unwanted files
+echo "This is a log file" > error.log
+mkdir logs
+echo "Log inside folder" > logs/app.log
+Step 3: Create a `.gitignore` file
+touch .gitignore
+Step 4: Check Git status
+git status
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+    .gitignore
+Step 5: Commit and Push to Remote
+git add .gitignore
+git commit -m "Add .gitignore to ignore .log files and logs directory"
+git remote add origin <your-repo-url>
+git push -u origin master
