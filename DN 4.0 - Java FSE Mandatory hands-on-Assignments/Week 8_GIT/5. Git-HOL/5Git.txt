@@ -1,0 +1,16 @@
+Step 1: Verify if master is in a clean state
+git status
+Your branch is up to date with 'origin/master',nothing to commit, working tree clean
+
+Step 2: List out all the available branches
+git branch -a
+  remotes/origin/feature-xyz
+  remotes/origin/master
+
+Step 3: Pull the remote Git repository to the master
+git pull origin master
+
+Step 4: Push the changes from “Git-T03-HOL\_002” to the remote repository
+git add .
+git commit -m "Git-T03-HOL_002 | Clean up and push changes"
+git push origin master
