@@ -1,0 +1,50 @@
+                                              1. Git-HOL
+Step 1: Check Git Version
+$ git --version
+Output:
+git version 2.42.0.windows.1
+Step 2: Set Global Git Config
+$ git config --global user.name "Manjusri"
+$ git config --global user.email "manjusri@example.com"
+$ git config --list
+Output:
+user.name=Manjusri
+user.email=manjusri@example.com
+core.editor='C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+ Step 3: Open Notepad++ from Git Bash
+$ notepad++
+Output:
+Notepad++ opens in a separate window
+Step 4: Create Project and Initialize Git
+$ mkdir GitDemo
+$ cd GitDemo
+$ git init
+Output:
+Initialized empty Git repository in C:/Users/Manjusri/GitDemo/.git/
+ Step 5: Create a File and Add Content
+$ echo "Welcome to Git Hands-on!" > welcome.txt
+$ ls
+Output:
+welcome.txt
+$ cat welcome.txt
+Output:
+Welcome to Git Hands-on!
+ Step 6: Track and Commit the File
+$ git status
+Output:
+Untracked files:welcome.txt
+$ git add welcome.txt
+$ git commit
+Output:
+Notepad++ opens with a file to write commit message. 
+Step 7: Check Status 
+$ git status
+ Output:
+On branch master nothing to commit, working tree clean
+Step 8: Link and Push to Remote Repo
+$ git remote add origin https://gitlab.com/manjusri/GitDemo.git
+$ git pull origin master
+$ git push -u origin master
+ 
+
+
