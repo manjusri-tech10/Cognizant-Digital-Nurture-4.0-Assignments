@@ -1,0 +1,75 @@
+Step 1: Verify if master is in clean state
+git status
+
+Step 2: Create a branch `GitWork` and add `hello.xml`
+git checkout -b GitWork
+echo "<message>Hello from GitWork branch</message>" > hello.xml
+
+Step 3: Update the content of `hello.xml` and observe status
+echo "<author>Git User</author>" >> hello.xml
+git status
+
+Step 4: Commit the changes in `GitWork` branch
+git add hello.xml
+git commit -m "Added hello.xml in GitWork branch with message and author"
+
+Step 5: Switch to master
+git checkout master
+
+Step 6: Add a file `hello.xml` to master with **different content**
+echo "<message>Hello from master branch</message>" > hello.xml
+
+Step 7: Commit changes in master
+git add hello.xml
+git commit -m "Added hello.xml in master branch with different message"
+ 
+Step 8: View commit graph (log)
+git log --oneline --graph --decorate --all
+
+Step 9: Check the differences using Git diff
+git diff GitWork hello.xml
+
+Step 10: (Optional) Use **P4Merge** for GUI diff
+git config --global merge.tool p4merge
+git config --global diff.tool p4merge
+git mergetool --tool=p4merge
+
+Step 11: Merge `GitWork` branch into master
+git merge GitWork
+
+Step 12: Observe Git conflict markers
+cat hello.xml
+xml
+<<<<<<< HEAD
+<message>Hello from master branch</message>
+=======
+<message>Hello from GitWork branch</message>
+<author>Git User</author>
+>>>>>>> GitWork
+
+Step 13: Use 3-way merge tool (P4Merge or manual edit)
+git mergetool
+xml
+<message>Hello from both branches</message>
+<author>Git User</author>
+git add hello.xml
+
+Step 14: Commit the merge resolution
+git commit -m "Resolved merge conflict in hello.xml"
+
+Step 15: Check status and ignore backup file
+git status
+echo "*.orig" >> .gitignore
+
+Step 16: Commit the `.gitignore` update
+git add .gitignore
+git commit -m "Ignored *.orig backup files"
+
+Step 17: List all available branches
+git branch
+
+Step 18: Delete the merged branch `GitWork`
+git branch -d GitWork
+
+Step 19: Final log visualization
+git log --oneline --graph --decorate
