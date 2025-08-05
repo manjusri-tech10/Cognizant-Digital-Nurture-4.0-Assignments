@@ -1,0 +1,42 @@
+1.Create a new branch called `GitNewBranch`
+git checkout -b GitNewBranch
+
+2.List all local and remote branches
+git branch -a
+
+3.Add files and content in the new branch
+echo "This is a new feature file" > feature.txt
+mkdir logs
+echo "Log entry" > logs/log.txt
+
+4.Stage and commit the changes
+git add .
+git commit -m "Added feature.txt and logs folder in GitNewBranch"
+
+5.Check the branch status
+git status
+
+6. Switch back to master (or trunk)
+git checkout master
+
+7.Check differences between master and branch
+git diff master GitNewBranch
+
+8.View visual differences using **P4Merge**
+git config --global merge.tool p4merge
+git config --global mergetool.p4merge.cmd '"C:/Program Files/Perforce/p4merge.exe" "$BASE" "$LOCAL" "$REMOTE" "$MERGED"'
+git mergetool
+
+9. Merge the branch into master
+git merge GitNewBranch
+
+10.Check merge logs 
+git log --oneline --graph --decorate
+
+11.Delete the merged branch
+git branch -d GitNewBranch
+git status
+
+12.Push the new branch to GitLab
+git push origin GitNewBranch
+
